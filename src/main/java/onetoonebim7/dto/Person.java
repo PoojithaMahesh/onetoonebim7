@@ -2,6 +2,7 @@ package onetoonebim7.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -10,6 +11,7 @@ public class Person {
 	private int id;
 	private String name;
 	private String address;
+	@JoinColumn
 	@OneToOne
 	private AadharCard aadharCard;
 	

@@ -60,6 +60,8 @@ public class AadharCardDao {
 //			id is present so i can update the data
 			EntityTransaction entityTransaction=entityManager.getTransaction();
 			entityTransaction.begin();
+			Person person=dbAadharCard.getPerson();
+			person.setAadharCard(null);
 			entityManager.remove(dbAadharCard);
 			entityTransaction.commit();
 		}else {

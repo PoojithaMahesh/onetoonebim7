@@ -10,7 +10,7 @@ public class AadharCard {
 	private int id;
 	private String name;
 	private int age;
-	@OneToOne
+	@OneToOne(mappedBy = "aadharCard")
 	private Person person;
 	public int getId() {
 		return id;
